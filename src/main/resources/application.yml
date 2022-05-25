@@ -3,3 +3,7 @@ logging:
     com:
       solactive: debug
 
+spring:
+  autoconfigure:
+    exclude: net.bull.javamelody.JavaMelodyAutoConfiguration
+

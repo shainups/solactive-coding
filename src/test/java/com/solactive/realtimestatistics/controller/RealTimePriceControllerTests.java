@@ -25,7 +25,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class RealTimePriceControllerIT {
+public class RealTimePriceControllerTests {
 
     @Autowired
     private MockMvc mvc;
