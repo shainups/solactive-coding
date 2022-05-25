@@ -161,7 +161,7 @@ public class RealTimePriceControllerIT {
         mvc.perform(get("/statistics").contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.count").value(6))
-                .andExpect(jsonPath("$.avg").value(1.3499999999999999))
+                .andExpect(jsonPath("$.avg").value(1.35))
                 .andExpect(jsonPath("$.min").value(1.1))
                 .andExpect(jsonPath("$.max").value(1.6));
 
@@ -169,7 +169,7 @@ public class RealTimePriceControllerIT {
         mvc.perform(get("/statistics/abc").contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.count").value(6))
-                .andExpect(jsonPath("$.avg").value(1.3499999999999999))
+                .andExpect(jsonPath("$.avg").value(1.35))
                 .andExpect(jsonPath("$.min").value(1.1))
                 .andExpect(jsonPath("$.max").value(1.6));
 
@@ -180,14 +180,14 @@ public class RealTimePriceControllerIT {
         mvc.perform(get("/statistics").contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.count").value(6))
-                .andExpect(jsonPath("$.avg").value(1.3499999999999999))
+                .andExpect(jsonPath("$.avg").value(1.35))
                 .andExpect(jsonPath("$.min").value(1.1))
                 .andExpect(jsonPath("$.max").value(1.6));
 
         mvc.perform(get("/statistics/abc").contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.count").value(6))
-                .andExpect(jsonPath("$.avg").value(1.3499999999999999))
+                .andExpect(jsonPath("$.avg").value(1.35))
                 .andExpect(jsonPath("$.min").value(1.1))
                 .andExpect(jsonPath("$.max").value(1.6));
 
@@ -195,14 +195,14 @@ public class RealTimePriceControllerIT {
         mvc.perform(get("/statistics").contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.count").value(5))
-                .andExpect(jsonPath("$.avg").value(1.3800000000000001))
+                .andExpect(jsonPath("$.avg").value(1.38))
                 .andExpect(jsonPath("$.min").value(1.1))
                 .andExpect(jsonPath("$.max").value(1.6));
 
         mvc.perform(get("/statistics/abc").contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.count").value(5))
-                .andExpect(jsonPath("$.avg").value(1.3800000000000001))
+                .andExpect(jsonPath("$.avg").value(1.38))
                 .andExpect(jsonPath("$.min").value(1.1))
                 .andExpect(jsonPath("$.max").value(1.6));
 
@@ -226,14 +226,14 @@ public class RealTimePriceControllerIT {
         mvc.perform(get("/statistics").contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.count").value(3))
-                .andExpect(jsonPath("$.avg").value(1.4000000000000001))
+                .andExpect(jsonPath("$.avg").value(1.40))
                 .andExpect(jsonPath("$.min").value(1.1))
                 .andExpect(jsonPath("$.max").value(1.6));
 
         mvc.perform(get("/statistics/abc").contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.count").value(3))
-                .andExpect(jsonPath("$.avg").value(1.4000000000000001))
+                .andExpect(jsonPath("$.avg").value(1.40))
                 .andExpect(jsonPath("$.min").value(1.1))
                 .andExpect(jsonPath("$.max").value(1.6));
 

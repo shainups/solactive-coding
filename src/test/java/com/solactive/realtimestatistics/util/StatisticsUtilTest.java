@@ -44,7 +44,7 @@ public class StatisticsUtilTest {
         StatisticsUtil.calculateStatistics(statistics, price);
 
         Assert.assertEquals("Count not matched", statistics.getCount(), 3);
-        Assert.assertEquals(statistics.getSum(), 3.5999999999999996, 0.0);
+        Assert.assertEquals(statistics.getSum(), 3.6, 0.0);
         Assert.assertEquals(statistics.getAvg(), 1.2, 0.0);
         Assert.assertEquals(statistics.getMin(), 1.1, 0.0);
         Assert.assertEquals(statistics.getMax(), 1.3, 0.0);

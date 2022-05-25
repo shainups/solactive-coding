@@ -2,6 +2,9 @@ package com.solactive.realtimestatistics.util;
 
 import com.solactive.realtimestatistics.model.Statistics;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class StatisticsUtil {
 
     protected StatisticsUtil() {
@@ -14,6 +17,7 @@ public class StatisticsUtil {
     }
 
     public static void calculateStatistics(Statistics store, Double price) {
+        BigDecimal bdPrice = BigDecimal.valueOf(price);
         store.setCount(store.getCount() + 1);        
         if (store.getCount() == 1) {
             store.setSum(price);
@@ -27,8 +31,10 @@ public class StatisticsUtil {
             if (price > store.getMax()) {
                 store.setMax(price);
             }
-            store.setSum(store.getSum() + price);
-            store.setAvg(store.getSum() / store.getCount());
+            BigDecimal sum = BigDecimal.valueOf(store.getSum()).add(bdPrice).setScale(7,
+                    RoundingMode.HALF_UP);
+            store.setSum(sum.doubleValue());
+            store.setAvg(sum.divide(BigDecimal.valueOf(store.getCount()), RoundingMode.HALF_UP).doubleValue());
         }
     }
 }
